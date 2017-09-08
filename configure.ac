@@ -1,6 +1,5 @@
 AC_INIT(OPENDROID)
 AM_INIT_AUTOMAKE(OPENDROID)
-AC_SYS_LARGEFILE
 
 TUXBOX_APPS_DIRECTORY
 
@@ -28,4 +27,3 @@ src/Makefile
 src/images/Makefile
 src/icons/Makefile
 ])
-AC_OUTPUT
