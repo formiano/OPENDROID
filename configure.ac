@@ -1,0 +1,31 @@
+AC_INIT(OPENDROID)
+AM_INIT_AUTOMAKE(OPENDROID)
+AC_SYS_LARGEFILE
+
+TUXBOX_APPS_DIRECTORY
+
+AC_PATH_PROG(MSGFMT, msgfmt, AC_MSG_ERROR(Could not find msgfmt))
+
+AM_PATH_PYTHON
+AC_PYTHON_DEVEL
+
+AC_PROG_CXX
+
+CPPFLAGS="$CPPFLAGS $PYTHON_CPPFLAGS"
+LDFLAGS="$LDFLAGS $PYTHON_LDFLAGS"
+
+AC_PATH_PROG(MSGFMT, msgfmt, AC_MSG_ERROR(Could not find msgfmt))
+AC_PATH_PROG(MSGINIT, msginit, AC_MSG_ERROR(Could not find msginit))
+AC_PATH_PROG(MSGMERGE, msgmerge, AC_MSG_ERROR(Could not find msgmerge))
+AC_PATH_PROG(MSGUNIQ, msguniq, AC_MSG_ERROR(Could not find msguniq))
+AC_PATH_PROG(XGETTEXT, xgettext, AC_MSG_ERROR(Could not find xgettext))
+
+AC_OUTPUT([
+Makefile
+etc/Makefile
+po/Makefile
+src/Makefile
+src/images/Makefile
+src/icons/Makefile
+])
+AC_OUTPUT
